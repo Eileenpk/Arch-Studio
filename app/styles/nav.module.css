@@ -1,0 +1,53 @@
+.link {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0px;
+    color: var(--dark-blue);
+}
+
+.nav {
+    
+}
+
+.navLinksContainer{
+    transform: translateX(550px)
+    /* background-color: var(--very-light-gray);
+    position: relative;
+    z-index: 1;
+    top: 24px;
+    right: -35px;
+    transform: translateX(550px) */
+}
+
+.nav::before {
+    content: "";
+    position: absolute; /* set position to absolute */
+    top: 96px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* set a semi-transparent background color */
+    z-index: -1; /* set z-index to -1 to be below the .nav */
+  }
+
+  .slideDown {
+    transition: transform .5s ease-in-out;
+    transform: translateX(0px);
+    background-color: var(--very-light-gray);
+    position: relative;
+    z-index: 1;
+    top: 24px;
+    right: -35px;
+    
+  }
+
+  .link:focus {
+    padding: 5px;
+    outline: 2px solid blue;
+  }
+
+  .button:focus {
+    outline: 2px solid blue;
+  }
+  

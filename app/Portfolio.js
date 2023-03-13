@@ -6,8 +6,8 @@ export default function Portfolio() {
   });
 
   return (
-    <>
+    <main>
       <div className="flex flex-wrap">{names}</div>
-    </>
+    </main>
   );
 }
