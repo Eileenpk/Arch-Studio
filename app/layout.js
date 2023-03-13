@@ -1,5 +1,6 @@
 import './globals.css'
-
+import Nav from './components/Nav'
+import Head from 'next/head'
 import { League_Spartan } from 'next/font/google'
 const leagueSpartan = League_Spartan({ 
   weight:['400', '700'],
@@ -15,6 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={leagueSpartan.className}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+        <Nav />
         {children}
       </body>
     </html>
