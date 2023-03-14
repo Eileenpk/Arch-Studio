@@ -154,6 +154,36 @@ The JavaScript has:
 
 - GetWindowWidth function to dynamically render content
 
+- Transition function
+    - Arguments 
+        - State to change
+        - Time for setTimeout
+    - Uses set timeout to add a class for a set time and then remove after set time for a transition on a conditionally rendered element
+    - example usage
+
+```
+    const [isActive, setIsActive] = useState(false);
+
+    function handleClick() {
+        Transition(setIsActive, 500)
+    }; 
+
+    <div className={` ${isActive ? styles.active : styles.projectContainer}`}>
+        {projects}
+    </div>
+    
+```
+```
+    .projectContainer {
+        transition: opacity 0.5s ease-in;
+        opacity: 1;
+    }
+  
+    .active {
+        opacity: 0.2;
+    }
+
+```
 - GoToSlideInCarousel function to go the the next slide in the carousel
     - Use state to track currentIndex
     - Map data in carousel.json
