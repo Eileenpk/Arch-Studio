@@ -42,6 +42,9 @@
 
   @media(min-width:768px) {
 
+    .nav {
+      align-self: flex-start;
+    }
     .link {
         font-size: 18px;
         font-weight: 700;
@@ -71,5 +74,11 @@
         display: inline-block;
     }
     
+  }
+
+  @media(min-width:1280px) {
+    .nav {
+      align-self: center;
+    }
   }
   

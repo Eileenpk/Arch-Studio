@@ -151,8 +151,14 @@ The CSS has:
 ### The JavaScript
 The JavaScript has:
 - FetchData function to retrieve data to be displayed
+
 - GetWindowWidth function to dynamically render content
+
 - GoToSlideInCarousel function to go the the next slide in the carousel
+    - Use state to track currentIndex
+    - Map data in carousel.json
+    - If index === currentIndex return info
+
 - Logic for mobile nav bar
     - Use getWindowWidth function to display mobile nav if width < 768, else display regular nav
     -  if < 768 and navIsOpen (state) === false
@@ -162,6 +168,7 @@ The JavaScript has:
         - Display <ul>(z-index: 2) with links under nav bar with overlay(z-index: 1)
 
 - Form validation
+
 - SendForm function to send form data to firebase collection and trigger auto send email
 - showPopUp function should show a popup with info for the corresponding office
 
