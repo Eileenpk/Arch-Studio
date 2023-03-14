@@ -165,13 +165,8 @@ The JavaScript has:
     const [isActive, setIsActive] = useState(false);
 
     function handleClick() {
-        Transition(setIsActive, 500)
-    }; 
-
-    <div className={` ${isActive ? styles.active : styles.projectContainer}`}>
-        {projects}
-    </div>
-    
+        Transition(setIsActive, 50)
+    }
 ```
 ```
     .projectContainer {
