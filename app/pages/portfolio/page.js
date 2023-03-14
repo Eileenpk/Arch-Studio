@@ -1,4 +1,4 @@
-import data from "../data/projects.json";
+import data from "/data/projects.json";
 
 export default function Portfolio() {
   const names = data.map((person) => {

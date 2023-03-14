@@ -77,7 +77,7 @@ export default function Nav() {
           <ul className={`flex flex-col gap-[17px]`}>
             <li>
               <a
-                href="Portfolio"
+                href="pages/portfolio"
                 aria-label="Portfolio link"
                 className={`${styles.link}`}
               >
