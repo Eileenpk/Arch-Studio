@@ -1,3 +1,22 @@
+/* typography */
+.heading {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -2px;
+    text-align: left;
+    color: var(--white);
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--white);
+}
+
 .button {
     width: 80px;
     height: 80px;
@@ -12,6 +31,47 @@
 .selected {
     background-color: var(--dark-blue);
     color: var(--white);
+}
+
+.projectContainer {
+    position: relative;
+    z-index: -1;
+}
+
+.projectContainer::before {
+    position: absolute;
+    width: 1110px;
+    height: 720px;
+    content: "";
+    z-index: 1;
+    background-color: #00000046;
+}
+
+.heading,
+.text {
+    position: absolute;
+    left: 190px;
+    z-index: 2;
+}
+
+.heading {
+    width: 544px;
+    bottom: 374px;
+}
+
+.text {
+    width: 445px;
+    bottom: 292px;
+}
+
+.buttonsContainer {
+    position: absolute;
+    bottom: 71px;
+    left: 10px;
+}
+
+.button:not(.selected) {
+    background-color: var(--white);
 }
 
 /* Transition for projects */

@@ -18,9 +18,9 @@ export default function Carousel() {
           key={project.info}
           className={``}
         >
-          <img src={project.src} />
-          <h1>{project.name}</h1>
-          <p>{project.info}</p>
+          <img className={`${styles.image}`} src={project.src} />
+          <h1 className={`${styles.heading}`}>{project.name}</h1>
+          <p className={`${styles.text}`}>{project.info}</p>
         </div>
       );
     }
