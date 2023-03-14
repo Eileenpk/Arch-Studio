@@ -19,7 +19,7 @@ export default function Carousel() {
           className={``}
         >
           <img className={`${styles.image}`} src={project.src} />
-          <h1 className={`${styles.heading}`}>{project.name}</h1>
+          <h2 className={`${styles.heading}`}>{project.name}</h2>
           <p className={`${styles.text}`}>{project.info}</p>
         </div>
       );

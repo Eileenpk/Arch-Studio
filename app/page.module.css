@@ -1,6 +1,63 @@
+/* typography */
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+  text-align: left;
+  color: var(--white);
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--white);
+}
+
+.heroBtn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: var(--white);
+}
+
 .main {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heading,
+.text {
+    position: absolute;
+    left: 32px;
+    width: 311px;
+    z-index: 2;
+}
+
+.heading {
+    bottom: 348px;
+}
+
+.text {
+    bottom: 265px;
+}
+
+.heroBtn {
+  position: absolute;
+  bottom: 110px;
+  left: 32px;
+  width: 252px;
+  height: 72px;
+  background-color: var(--dark-blue);
 }

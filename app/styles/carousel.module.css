@@ -33,6 +33,10 @@
     color: var(--white);
 }
 
+.carouselContainer {
+    position: relative;
+}
+
 .projectContainer {
     position: relative;
     z-index: -1;
@@ -67,7 +71,7 @@
 .buttonsContainer {
     position: absolute;
     bottom: 71px;
-    left: 10px;
+    left: -80px;
 }
 
 .button:not(.selected) {
