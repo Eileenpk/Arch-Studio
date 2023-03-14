@@ -5,11 +5,22 @@ import data from "/data/carousel.json";
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const [isActive, setIsActive] = useState(false);
+  function handleClick() {
+    setIsActive(true);
+    setTimeout(() => {
+        setIsActive(false);
+    }, 500); // Remove the class after 1 second
+  }
 
   const projects = data.map((project, index) => {
     if (currentIndex === index) {
       return (
-        <div>
+        <div
+          key={project.info}
+          className={``}
+        >
           <img src={project.src} />
           <h1>{project.name}</h1>
           <p>{project.info}</p>
@@ -18,9 +29,23 @@ export default function Carousel() {
     }
   });
 
-  return ( 
-  <div className={`${styles.carouselContainer}`}>
-    {projects}
-  </div>
+  return (
+    <div className={`${styles.carouselContainer}`}>
+      <div className={` ${isActive ? styles.active : styles.projectContainer}`}>{projects}</div>
+
+      <div className={`${styles.buttonsContainer}`} onClick={handleClick}>
+        {data.map((project, index) => (
+          <button
+            key={project.name}
+            className={`${styles.button} ${
+              currentIndex === index ? styles.selected : ""
+            }`}
+            onClick={() => setCurrentIndex(index)}
+          >
+            {`0${index + 1}`}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }

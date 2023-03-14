@@ -1,3 +1,26 @@
-.carouselContainer {
-    
+.button {
+    width: 80px;
+    height: 80px;
+    color: var(--med-gray);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
 }
+
+.selected {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+/* Transition for projects */
+
+.projectContainer {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+  }
+  
+  .active {
+    opacity: 0.2;
+  }
