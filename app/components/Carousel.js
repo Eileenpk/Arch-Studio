@@ -2,17 +2,14 @@
 import styles from "../styles/carousel.module.css";
 import { useState } from "react";
 import data from "/data/carousel.json";
-
+import Transition from "../functions/Transition";
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const [isActive, setIsActive] = useState(false);
   function handleClick() {
-    setIsActive(true);
-    setTimeout(() => {
-        setIsActive(false);
-    }, 500); // Remove the class after 1 second
-  }
+    Transition(setIsActive, 500)
+  } 
 
   const projects = data.map((project, index) => {
     if (currentIndex === index) {
