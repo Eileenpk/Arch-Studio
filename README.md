@@ -156,10 +156,10 @@ The JavaScript has:
 - Logic for mobile nav bar
     - Use getWindowWidth function to display mobile nav if width < 768, else display regular nav
     -  if < 768 and navIsOpen (state) === false
-    - display hamburger.svg
+        - display hamburger.svg
     - If < 768 and navIsOpen (state) === true
-    - Display close.svg not hamburger.svg
-    - Display <ul>(z-index: 2) with links under nav bar with overlay(z-index: 1)
+        - Display close.svg not hamburger.svg
+        - Display <ul>(z-index: 2) with links under nav bar with overlay(z-index: 1)
 
 - Form validation
 - SendForm function to send form data to firebase collection and trigger auto send email
