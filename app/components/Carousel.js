@@ -8,7 +8,7 @@ export default function Carousel() {
   
   const [isActive, setIsActive] = useState(false);
   function handleClick() {
-    Transition(setIsActive, 500)
+    Transition(setIsActive, 300)
   } 
 
   const projects = data.map((project, index) => {
