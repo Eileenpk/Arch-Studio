@@ -21,7 +21,7 @@ export default function Nav() {
   };
   return (
     <nav
-      className={`relative p-8 flex flex-wrap justify-between items-center md:py-14 md:px-[5%] xl:px-0 xl:w-[1110px] md:justify-start ${
+      className={`relative p-8 flex flex-wrap justify-between items-center md:py-14 md:px-[8%] xl:px-0 xl:w-[1110px] md:justify-start ${
         navIsOpen ? styles.nav : ""
       }`}
     >

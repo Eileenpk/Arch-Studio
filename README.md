@@ -26,7 +26,7 @@ The HTML has:
     - Home
 
         - Header section - project carousel 
-            - Page name (h1)
+            - Page name (aside)
             - Uses GoToSlideInCarousel function
             - Project name (h2)
             - Info text (p)
@@ -34,7 +34,7 @@ The HTML has:
             - display correct background image at desktop, tablet and mobile size
 
         - Welcome section
-            - Welcome (h2)
+            - Welcome (h1)
             - Image
             - Welcome text
 
@@ -54,7 +54,7 @@ The HTML has:
     - Portfolio
 
         - Header section
-            - Page name (h1)
+            - Page name (aside)
 
         - Portfolio card section (maps all projects and returns portfolio cards)
             - Portfolio card
@@ -65,9 +65,9 @@ The HTML has:
     - About
 
         - Header
-            - Page name (h1)
-            - About (h2)
-            - Subheading (h3)
+            - Page name (aside)
+            - About (h1)
+            - Subheading (h2)
             - Info text (p)
             - Background image
 
@@ -86,9 +86,9 @@ The HTML has:
     - Contact 
 
         - Header
-            - Page name (h1)
-            - About (h2)
-            - Subheading (h3)
+            - Page name (aside)
+            - About (h1)
+            - Subheading (h2)
             - Info text (p)
             - Background image
         

@@ -43,7 +43,8 @@
   @media(min-width:768px) {
 
     .nav {
-      align-self: flex-start;
+      align-self: center;
+      margin-right: 100px;
     }
     .link {
         font-size: 18px;
@@ -79,6 +80,7 @@
   @media(min-width:1280px) {
     .nav {
       align-self: center;
+      margin-right: 0;
     }
   }
   
