@@ -16,12 +16,23 @@
     text-align: left;
     color: var(--dark-gray);
   }
+
+
   
   
   @media(min-width:768px) {
+    .headerAboutText {
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 200px;
+        letter-spacing: -3px;
+        text-align: right;
+        color: var(--very-light-gray);
+    }
+
     .heading {
-      font-size: 96px;
-      line-height: 80px;
+      font-size: 72px;
+      line-height: 64px;
       letter-spacing: -2px;
     }
   
@@ -78,18 +89,82 @@
     display: none;
 }
 
+.headerAboutTextContainer {
+    display: none;
+}
+
 
 
 @media(min-width:768px) {
+
+    .heroContainer::before {
+        position: absolute;
+        width: 100%;
+        height: 720px;
+        content: "";
+        z-index: 1;
+        background-color: #00000046;
+    }
+
+    .heroImage {
+        background-image: url(../../public/assets/about/tablet/image-hero.jpg);
+        height: 720px;
+    }
+
+    .headerWhiteBox {
+        background-color: var(--white);
+        width: 572px;
+        height: 431px;
+        z-index: 3;
+        position:absolute;
+        top: 289px;
+        right: -57px;
+        z-index: 3;
+    }
+
+    .aside {
+        display:block;
+    }
+    
+    .headerAboutTextContainer {
+        display: block;
+        position: absolute;
+        top: 204px;
+        right: 0;
+        z-index: 4;
+    }
+
+    .headerHr {
+        height: 1px;
+        width: 65px;
+        background-color: var(--light-gray);
+        position: relative;
+        top: -27px;
+        left: -150px;
+    }
+
     .heading {
-      width: 457px;
+      width: 456px;
+      position: absolute;
+      top: 451px;
+      right: 0;
+      z-index: 4;
+    }
+
+    .text {
+        width: 70%;
+        position: relative;
+        top: -100px;
+        left: 155px;
+        z-index: 4;
     }
   
     .asideText {
       transform: rotate(90deg);
       position: absolute;
-      top: 50px;
-      left: -157px;
+      top: 98px;
+      left: -210px;
+      white-space: nowrap;
     }
   
     .asideBar {
