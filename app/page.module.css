@@ -84,6 +84,21 @@
   width: 252px;
   height: 72px;
   background-color: var(--dark-blue);
+  z-index: 2;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: -1;
+}
+
+.heroContainer::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 1;
+  background-color: #00000046;
 }
 
 @media(min-width:768px) {
