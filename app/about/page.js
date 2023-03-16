@@ -1,9 +1,6 @@
 "use client";
 import styles from "./about.module.css";
 import GetWindowWidth from "../functions/GetWindowWidth";
-import SimpleHeader from "../components/simple-header";
-import headerImage from "@/public/assets/about/mobile/image-hero.jpg";
-import headImage2 from "../../public/assets/home/tablet/image-hero-paramour.jpg";
 export default function () {
   const { width } = GetWindowWidth();
   return (
