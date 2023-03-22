@@ -13,7 +13,7 @@ export default function Home() {
         {width > 1280 && <Carousel />}
         {width < 1280 && (
           <div className={` ${styles.heroContainer}`}>
-            <Image src={headImage} />
+            <Image src={headImage} alt='Paramour building' />
             <h2 className={`${styles.heading}`}>Project Paramour</h2>
             <p className={`${styles.text}`}>
               Project made for an art museum near Southwest London. Project
@@ -28,9 +28,9 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
                 <g
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   stroke="#ffffff"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <path d="M15 1l9 9-9 9M0 10h24" />
                 </g>
