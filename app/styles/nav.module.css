@@ -22,9 +22,19 @@
     z-index: 1; /* set z-index to -1 to be below the .nav */
   }
 
-  .slideDown {
+  .active {
     transition: transform .5s ease-in-out;
     transform: translateX(0px);
+    z-index: 30;
+  }
+
+  .closing {
+    transition: transform .5s ease-in-out;
+    transform: translateX(100vw);
+    z-index: 3;
+  }
+
+  .mobileNav {
     background-color: var(--very-light-gray);
     position: absolute;
     z-index: 2;
@@ -47,6 +57,7 @@
       align-self: center;
       margin-right: 100px;
     }
+
     .link {
         font-size: 18px;
         font-weight: 700;

@@ -2,9 +2,26 @@
 import GetWindowWidth from "../functions/GetWindowWidth";
 import { useState, useRef, useEffect } from "react";
 import styles from "../styles/nav.module.css";
+import Transition from "../functions/Transition";
 export default function Nav() {
   const { width } = GetWindowWidth();
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  function handleClick() {
+    if (navIsOpen) {
+      Transition(setIsClosing, 500);
+      setTimeout(() => {
+        setNavIsOpen(false)
+      }, 500)
+    } 
+    else {
+      Transition(setIsActive, 500);
+      setNavIsOpen(true)
+    } 
+  }
+
   useEffect(() => {
     if (width > 768) {
       setNavIsOpen(true);
@@ -48,7 +65,7 @@ export default function Nav() {
           ref={svgRef}
           className={styles.button}
           tabIndex="0"
-          onClick={() => setNavIsOpen(true)}
+          onClick={handleClick}
           onKeyDown={handleKeyDown}
           aria-labelledby="open-nav"
           xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +83,7 @@ export default function Nav() {
           ref={svgRef}
           className={styles.button}
           tabIndex="0"
-          onClick={() => setNavIsOpen(false)}
+          onClick={handleClick}
           onKeyDown={handleKeyDown}
           aria-labelledby="close-nav"
           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +101,9 @@ export default function Nav() {
       {navIsOpen ? (
         <div
           className={`w-[91vw] h-[235px] pl-12 pt-[39px] md:pt-0 md:w-fit md:h-10 md:pl-[78px] xl:pl-24 ${
-            navIsOpen ? styles.slideDown : ""
+            isActive ? styles.active : styles.mobileNav
+          } ${
+            isClosing ? styles.closing : ""
           }`}
         >
           <ul
