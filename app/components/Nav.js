@@ -10,7 +10,7 @@ export default function Nav() {
   const [isClosing, setIsClosing] = useState(false);
 
   function handleClick() {
-    if (navIsOpen) {
+    if (navIsOpen && width < 768) {
       Transition(setIsClosing, 500);
       setTimeout(() => {
         setNavIsOpen(false)
@@ -100,8 +100,8 @@ export default function Nav() {
       )}
       {navIsOpen ? (
         <div
-          className={`w-[91vw] h-[235px] pl-12 pt-[39px] md:pt-0 md:w-fit md:h-10 md:pl-[78px] xl:pl-24 ${
-            isActive ? styles.active : styles.mobileNav
+          className={`w-[91vw] h-[235px] pl-12 pt-[39px] md:pt-0 md:w-fit md:h-10 md:pl-[78px] xl:pl-24 ${navIsOpen && width < 768 ? styles.mobileNav : "" } ${
+            isActive ? styles.active : ""
           } ${
             isClosing ? styles.closing : ""
           }`}
