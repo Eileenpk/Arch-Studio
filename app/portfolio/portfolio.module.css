@@ -1,0 +1,31 @@
+    .projectImg {
+        height: 240px;
+        width: 83%;
+        size: contain;
+    }
+    
+    
+    /* Aside styles */
+    .aside {
+        display: block;
+        position: relative;
+        top: 0px;
+      }
+      .asideText {
+        transform: rotate(90deg);
+        position: absolute;
+        top: 98px;
+        left: -210px;
+        white-space: nowrap;
+      }
+    
+      .asideBar {
+        position: absolute;
+        top: -150px;
+        left: -97px;
+        width: 1px;
+        height: 104px;
+        background-color: var(--light-gray);
+      }
+  
+      /* End aside styles */

@@ -22,7 +22,7 @@ export default function Carousel() {
           <h2 className={`${styles.heading}`}>{project.name}</h2>
           <p className={`${styles.text}`}>{project.info}</p>
         </div>
-      );
+      );  
     }
   });
 
