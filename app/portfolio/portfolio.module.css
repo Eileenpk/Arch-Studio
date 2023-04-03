@@ -1,11 +1,17 @@
     .projectImg {
         height: 240px;
         width: 83%;
+        max-width: 573px;
         size: contain;
+    }
+
+    .aside {
+        display: none;
     }
     
     
-    /* Aside styles */
+    @media(min-width: 768px) {
+        /* Aside styles */
     .aside {
         display: block;
         position: relative;
@@ -29,3 +35,11 @@
       }
   
       /* End aside styles */
+    }
+
+      @media(min-width: 1280px) {
+        .projectImg {
+            height: 560px;
+            width: 350px;
+        }
+      }
