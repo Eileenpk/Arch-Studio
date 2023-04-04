@@ -1,20 +1,63 @@
     /* typography  */
 
     .asideText {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 18px;
-    text-align: left;
-    color: var(--light-gray);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 18px;
+        text-align: left;
+        color: var(--light-gray);
     }
-    
-    .projectImg {
+
+    .projectTitle {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--white);
+    }
+
+    .projectDate {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--white);
+    }
+
+
+    /* End typography */
+
+    .projectContainer {
+       background-repeat: no-repeat;
+       background-size: cover;
+       position: relative;
+    }
+
+    .projectContainer::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        opacity: 0.2;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .projectInfoContainer {
+        position: relative;
+        z-index: 22;
+    }
+
+    /* .projectImg {
         height: 240px;
         width: 83%;
         max-width: 573px;
         size: contain;
-    }
+    } */
 
     .aside {
         display: none;
